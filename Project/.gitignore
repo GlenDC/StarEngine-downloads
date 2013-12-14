@@ -1,0 +1,42 @@
+# Compiled Object files
+*.slo
+*.lo
+*.o
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+
+# Microsoft Visual Studios
+*.sdf
+*.opensdf
+*.v11.suo
+*.suo
+StarEngine.v11.suo
+
+# Microsoft Visual Studios Performance analyze files
+*.psess
+*.vspx
+
+# Generated Directories
+bin/
+gen/
+Debug/
+Release/
+src/
+Obj/
+.svn/
+
+# ignore unwanted files
+*.lnk
+
+# eclipse build
+armeabi/
+
+# starengine files
+*.star

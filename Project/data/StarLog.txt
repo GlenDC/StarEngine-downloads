@@ -1,0 +1,26 @@
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+	Star Engine version 0.1.0
+
+	Game is built in debug mode.
+	All Star::Logging levels are enabled.
+
+	The Star Engine is licensed under the MIT License. 
+	For more information you can go to http://www.starengine.eu/ 
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+[00:00:00] [STARENGINE] [INFO] Graphics Manager : Constructor
+[00:00:00] [STARENGINE] [INFO] Graphics Manager : Initializing OpenGL Functors
+[00:00:00] [STARENGINE] [INFO] Audio : Started making Audio Engine
+[00:00:00] [STARENGINE] [INFO] Audio : SDL specs : Actual Rate : 44100, Actual Format : 32784, Actual Channels : 2
+
+[00:00:00] [STARENGINE] [INFO] Adding scene
+[00:00:00] [STARENGINE] [DEBUG] PNG : ./assets/StarEngine/SESplashScreen.png Created Succesfull
+[00:00:00] [STARENGINE] [INFO] Adding scene
+[00:00:00] [STARENGINE] [INFO] Scene SplashScene is now Active
+[00:00:00] [GAME] [INFO] Scenes Set and Done.
+[00:00:00] [STARENGINE] [INFO] Scene ExampleScene is now Active
+[00:00:01] [GAME] [INFO] Game ends.
+[00:00:01] [STARENGINE] [INFO] Font Manager : Initialized FreeType library
+[00:00:01] [STARENGINE] [INFO] Graphics Manager : Destructor
