@@ -16,8 +16,8 @@ namespace star
 	public:
 		~Window(void);
 
-		static Window 
-		void Initialize(HINSTANCE instance, BaseGame 
+		static Window * GetInstance();
+		void Initialize(HINSTANCE instance, BaseGame * pBaseGame, bool useConsole = false);
 
 		void WindowInactiveUpdate(bool inactive);
 		const HDC & GetHDC() const;
@@ -50,7 +50,7 @@ namespace star
 		HWND GetConsoleHWND();
 		void SetWindowsTitle() const;
 
-		static Window 
+		static Window * m_pInstance;
 
 		void ClientResize(int32 & width, int32 & height);
 		void GetWindowDifferenceSize(int32 & difX, int32 & difY);
@@ -72,8 +72,8 @@ namespace star
 
 		WindowState m_SavedWindowState;
 
-		BaseGame
-		TimeManager
+		BaseGame* mGamePtr;
+		TimeManager* mTimeManager;
 		Context mContext;
 
 		HWND mHandle;
