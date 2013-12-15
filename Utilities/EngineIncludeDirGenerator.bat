@@ -6,6 +6,7 @@ StarEngine\include
 
 robocopy %~dp0 %DESTINATION%\ *.h /mt:8
 robocopy %~dp0jni\ %DESTINATION%\ *.h /s /mt:8
+robocopy %~dp0jni\ %DESTINATION%\ *.hpp /s /mt:8
 robocopy %~dp0jni\ %DESTINATION%\ *.inl /s /mt:8
 	
 del %DESTINATION%\resource.h
@@ -21,7 +22,7 @@ set file=%DESTINATION%\%name%%ext%
 set fileCopy=%DESTINATION%\%name%Copy%ext%
 
 set fileCopy=%DESTINATION%\WindowCopy.h
-for /F "delims=*" %%a in ('findstr /n $ %file%') DO (
+for /F "delims=" %%a in ('findstr /n $ %file%') DO (
 	set line=%%a
     setlocal EnableDelayedExpansion
 	set "line=!line:*:=!"
