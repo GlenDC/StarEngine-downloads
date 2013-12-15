@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="jni\Game.cpp" />
+    <ClCompile Include="jni\Main.cpp" />
+    <ClCompile Include="jni\scenes\ExampleScene.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="jni\Game.h" />
+    <ClInclude Include="jni\Main.h" />
+    <ClInclude Include="jni\scenes\ExampleScene.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="stargame.rc" />
+  </ItemGroup>
+</Project>
