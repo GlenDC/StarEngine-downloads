@@ -15,8 +15,14 @@ namespace star
 			);
 		virtual ~UIDock(void);
 
-		virtual void SetHorizontalAlignment(HorizontalAlignment alignment);
-		virtual void SetVerticalAlignment(VerticalAlignment alignment);
+		virtual void SetHorizontalAlignment(
+			HorizontalAlignment alignment,
+			bool redefine_center = true
+			);
+		virtual void SetVerticalAlignment(
+			VerticalAlignment alignment,
+			bool redefine_center = true
+			);
 
 		void SetDimensions(const vec2 & dimensions);
 		void SetDimensions(float32 x, float32 y);
@@ -27,6 +33,12 @@ namespace star
 
 	protected:
 		vec2 m_Dimensions;
+		virtual bool CheckCulling(
+			float32 left,
+			float32 right,
+			float32 top,
+			float32 bottom
+			);
 
 	private:
 		UIDock(const UIDock &);

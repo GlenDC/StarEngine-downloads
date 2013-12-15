@@ -3,8 +3,8 @@
 #pragma once
 
 #include <Windows.h>
-#include <BaseGame.h>
-#include <Context.h>
+#include "BaseGame.h"
+#include "Context.h"
 
 namespace star
 {
@@ -16,8 +16,8 @@ namespace star
 	public:
 		~Window(void);
 
-		static Window * GetInstance();
-		void Initialize(HINSTANCE instance, BaseGame * pBaseGame, bool useConsole = false);
+		static Window 
+		void Initialize(HINSTANCE instance, BaseGame 
 
 		void WindowInactiveUpdate(bool inactive);
 		const HDC & GetHDC() const;
@@ -50,7 +50,7 @@ namespace star
 		HWND GetConsoleHWND();
 		void SetWindowsTitle() const;
 
-		static Window * m_pInstance;
+		static Window 
 
 		void ClientResize(int32 & width, int32 & height);
 		void GetWindowDifferenceSize(int32 & difX, int32 & difY);
@@ -72,8 +72,8 @@ namespace star
 
 		WindowState m_SavedWindowState;
 
-		BaseGame* mGamePtr;
-		TimeManager* mTimeManager;
+		BaseGame
+		TimeManager
 		Context mContext;
 
 		HWND mHandle;

@@ -44,10 +44,16 @@ namespace star
 
 		const pos & GetPosition() const;
 
-		virtual void SetHorizontalAlignment(HorizontalAlignment alignment);
-		virtual void SetVerticalAlignment(VerticalAlignment alignment);
+		virtual void SetHorizontalAlignment(
+			HorizontalAlignment alignment,
+			bool redefine_center = true
+			);
+		virtual void SetVerticalAlignment(
+			VerticalAlignment alignment,
+			bool redefine_center = true
+			);
 
-		void SetAlignmentCentered();
+		void SetAlignmentCentered(bool redefine_center = true);
 
 		virtual void Reset();
 		void Reposition();
@@ -57,7 +63,19 @@ namespace star
 
 		void SetUIDisabledChildren(bool disable);
 
+		void SetDebugDrawColor(const Color& color);
+		const Color& GetDebugDrawColor() const;
+
+		void SetDebugDrawStyle(bool filled);
+		bool GetDebugDrawStyle() const;
+
+		void SetCanDebugDraw(bool canDraw);
+		bool GetCanDebugDraw() const;
+
+
 	protected:
+		static uint64 UNIQUE_ID_COUNTER;
+
 		virtual void Update(const Context& context);
 		virtual void Draw();
 
@@ -76,10 +94,17 @@ namespace star
 		pos m_Position;
 		HorizontalAlignment m_HorizontalAlignment;
 		VerticalAlignment m_VerticalAlignment;
+		const tstring m_UniqueUIObjectID;
 
 		UIObject *m_pParent;
 
 	private:
+		void DebugDraw();
+
+		Color m_DebugDrawColor;
+		bool m_bDebugDrawFilled;
+		bool m_bCanDebugDraw;
+
 		UIObject(const UIObject &);
 		UIObject(UIObject &&);
 		UIObject & operator=(const UIObject &);
