@@ -5,12 +5,12 @@
 #include <Helpers/Helpers.h>
 #include <Graphics/GraphicsManager.h>
 #include <Graphics/Scalesystem.h>
-#include <Assets/FontManager.h>
+#include <Graphics/FontManager.h>
+#include <Graphics/SpriteAnimationManager.h>
+#include <Graphics/FontManager.h>
+#include <Graphics/UI/UICursor.h>
 #include <Sound/AudioManager.h>
 #include <Scenes/SceneManager.h>
-#include <Graphics/SpriteAnimationManager.h>
-#include <Assets/FontManager.h>
-#include <Graphics/UI/UICursor.h>
 #include <Input/InputManager.h>
 #include <Scenes/SplashScreen.h>
 
